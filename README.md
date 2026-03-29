@@ -26,3 +26,9 @@ python setup.py develop
 
 - Docker
 - docker-compose
+
+## Test Environment
+
+- OS: ArchLinux with `6.19.10-arch1-1` kernel
+- GPU: BMG21 Arc B580
+- CPU: Ryzen 5800X
