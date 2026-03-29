@@ -1,0 +1,23 @@
+services:
+  pytorch-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pytorch-xpu-builder
+    container_name: pytorch-xpu-builder
+    privileged: true
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - ./pytorch:/workspace/pytorch
+      - ./build.sh:/workspace/build.sh  # 挂载脚本
+    environment:
+      - PYTHONUNBUFFERED=1
+      - HTTP_PROXY
+      - HTTPS_PROXY
+      - http_proxy
+      - https_proxy
+    working_dir: /workspace/pytorch
+    tty: true
+    stdin_open: true
+    command: ["bash", "/workspace/build.sh"]
