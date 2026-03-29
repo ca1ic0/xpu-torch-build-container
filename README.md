@@ -11,10 +11,13 @@ docker compose up -d
 ```
 After the compose, we could see the output of building
 <img width="1823" height="1103" alt="image" src="https://github.com/user-attachments/assets/69f3910a-d9fd-41f6-8786-21ee6b3e7ba5" />
+
 2. Attach to container
+
 ```bash
 docker exec -it pytorch-xpu-builder bash
 ```
+
 3. Inside container: activate venv and build
 
 ```bash
