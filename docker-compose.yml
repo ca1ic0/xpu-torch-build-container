@@ -20,4 +20,4 @@ services:
     working_dir: /workspace/pytorch
     tty: true
     stdin_open: true
-    command: ["bash", "/workspace/build.sh"]
+    command: ["bash", "/workspace/build.sh"] #

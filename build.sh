@@ -17,12 +17,17 @@ if [ ! -d '.git' ]; then
     git submodule update --init --recursive
 fi
 
+# apt install  python3-dev build-essential cmake git curl libopenblas-dev
+
 source /opt/venv/bin/activate
+
+env
+
 echo "VIRTUAL_ENV=${VIRTUAL_ENV:-not set}" >&2
 echo "CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH:-not set}" >&2
 
 echo "Installing build requirements..." >&2
-pip install -r requirements-build.txt
+pip install -i https://mirrors.ustc.edu.cn/pypi/simple -r  requirements-build.txt
 
 echo "Building PyTorch in editable mode..." >&2
 python -m pip install --no-build-isolation -v -e .

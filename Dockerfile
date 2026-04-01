@@ -13,6 +13,7 @@ RUN apt update && apt upgrade -y && \
     intel-media-va-driver-non-free libmfx-gen1 libvpl2 libvpl-tools libva-glx2 va-driver-all vainfo \
     libze-dev intel-ocloc \
     libze-intel-gpu-raytracing \
+    python3-dev build-essential cmake git curl libopenblas-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
